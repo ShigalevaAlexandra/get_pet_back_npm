@@ -1,0 +1,91 @@
+:root {
+    --fiola: #EBEDFF;
+    --shadow: 0 0 10px rgba(0,0,0,0.5);
+    --main-text: #003777;
+    --back-color-text: #757700;
+}
+
+.header_and_footer {
+    background: var(--fiola);
+    box-shadow: var(--shadow);
+}
+
+.main_text {
+    font-size: larger;
+    color: var(--main-text);
+}
+
+.larger_text {
+    font-size: larger;
+}
+
+.main_color_text {
+    color: var(--main-text);
+}
+
+.main_background {
+    min-height: 70vh;
+    background: url("../img/BCKGR_1.svg") no-repeat;
+}
+
+.search {
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.back_color_text {
+    color: var(--back-color-text);
+}
+
+.my_carousel {
+    min-height: 400px;
+    background: white;
+    border-radius: 5%;
+    box-shadow: var(--shadow);
+}
+
+.top_border_radius {
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.top_border_radius_img {
+    -moz-border-radius-topleft: 4%;
+    -moz-border-radius-topright: 4%;
+    -webkit-border-top-left-radius: 4%;
+    -webkit-border-top-right-radius: 4%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.my_cards{
+    min-width: 300px;
+    width: 45%;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.my_link {
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.min_width_300 {
+    min-width: 300px;
+}
+
+.sear_text {
+    color: rgba(108, 117, 125, 0.78);
+}
+
+.font_family {
+    font-family: 'Comic Sans MS';
+}
+
+.loading {
+    display: flex;
+}
+
+/*-------------------------------------------------------------------------*/
