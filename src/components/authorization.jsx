@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from "react";
 
-import {userEmailValid, userPassValid} from "../modules/validateForm";
+import {userEmailValid, userPassAuthValid} from "../modules/validateForm";
 import Token from "../modules/tokens";
 
 const Auth = () => {
@@ -53,7 +53,7 @@ const Auth = () => {
                 error = userEmailValid(value);
                 break;
             case "password":
-                error = userPassValid(value);
+                error = userPassAuthValid(value);
                 break;
         }
         setValidations((prev) => ({...prev, [name]: !error}));
@@ -62,7 +62,7 @@ const Auth = () => {
 
     const handleSubmit = () => {
         const emailError = userEmailValid(formData.email);
-        const passwordError = userPassValid(formData.password);
+        const passwordError = userPassAuthValid(formData.password);
 
         if (emailError || passwordError) {
             setErrors({email: emailError, password: passwordError});
@@ -94,9 +94,9 @@ const Auth = () => {
                                        placeholder="Ваш E-mail"
                                        onChange={handleInputChange}
                                        required/>
-                                <span className="text-danger">{errors.email}</span>
-                                <small id="AccountlogHelp" className="form-text text-muted small"><a href="#">Забыли
-                                    логин?</a></small>
+                                <small className="form-text text-muted small">{errors.email}</small>
+                                <p id="AccountlogHelp" className="form-text text-muted small"><a href="#">Забыли
+                                    логин?</a></p>
                             </div>
                             <div className="form-group py-3">
                                 <label htmlFor="InputPass">Пароль</label>
@@ -106,9 +106,9 @@ const Auth = () => {
                                        aria-describedby="AccountPassHelp"
                                        onChange={handleInputChange}
                                        required/>
-                                <span className="text-danger">{errors.password}</span>
-                                <small id="AccountPassHelp" className="form-text text-muted small"><a href="#">Забыли
-                                    пароль?</a></small>
+                                <small className="form-text text-muted small">{errors.password}</small>
+                                <p id="AccountPassHelp" className="form-text text-muted small"><a href="#">Забыли
+                                    пароль?</a></p>
                             </div>
                             <div className="form-check py-3">
                                 <input type="checkbox" name="learn_me" className="form-check-input"

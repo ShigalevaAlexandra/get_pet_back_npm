@@ -2,7 +2,7 @@ import React from "react";
 import {useState, useEffect} from "react";
 
 import Header from "../components/header";
-import FSearch from "../components/fustSearch";
+import FustSearch from "../components/fustSearch";
 import Slider from "../components/slider"
 import CardPet from "../components/cardPet";
 import Subscribe from "../components/subscribeNews";
@@ -28,7 +28,7 @@ const Main = () => {
         <div className="main_background font_family">
             <Header/>
             <main>
-                <FSearch/>
+                <FustSearch/>
                 <h2 className="text-center py-2 main_color_text font_family my-5">Найденные животные</h2>
                 <Slider/>
                 <h2 className="text-center py-2 main_color_text font_family my-5">Карточки найденных животных</h2>

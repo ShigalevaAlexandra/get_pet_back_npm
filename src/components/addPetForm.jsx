@@ -183,9 +183,9 @@ const AddPetForm = () => {
                         <small className="text-danger">{errors.email}</small>
                     </div>
                     <details id='register' className="my-5">
-                        <h2 className="text-center text-white bg-primary mt-3">Регистрация</h2>
+                        <h2 className="text-center py-4 back_color_text">Регистрация</h2>
                         <div className="row mb-3">
-                            <label htmlFor="password" className="col-form-label">Пароль</label>
+                            <label htmlFor="password" className="col-form-label main_color_text">Пароль</label>
                             <div className="col-sm-10 w-100">
                                 <input type="password" className={`form-control m-auto ${validations.password ? "is-valid" : errors.password ? "is-invalid" : ""}`}
                                        onChange={handlerInput} id="password" name="password" />
@@ -193,14 +193,13 @@ const AddPetForm = () => {
                             </div>
                         </div>
                         <div className="row mb-3">
-                            <label htmlFor="password_confirmation" className="col-form-label">Подтвердите пароль</label>
+                            <label htmlFor="password_confirmation" className="col-form-label main_color_text">Подтвердите пароль</label>
                             <div className="col-sm-10 w-100">
                                 <input type="password" className={`form-control m-auto ${validations.password_confirmation ? "is-valid" : errors.password_confirmation ? "is-invalid" : ""}`}
                                        onChange={handlerInput} id="password_confirmation" name="password_confirmation" />
                                 <small className="text-danger">{errors.password_confirmation}</small>
                             </div>
                         </div>
-                        <h2 className="text-center text-white bg-primary mt-3">ㅤ</h2>
                         <summary className="btn btn-primary" style={{ "listStyleType": "none" }}>Регистрация</summary>
                     </details>
                     <div className="row mb-3">
@@ -240,7 +239,6 @@ const AddPetForm = () => {
                         <div className="col-sm-10 py-3">
                             <input className={`form-control sear_text ${validations.mark ? "is-valid" : ""}`}
                                    onChange={handlerInput} id="markPet" name="mark" />
-                            <small className="text-danger">{errors.mark}</small>
                         </div>
                     </div>
                     <div className="form-group py-3">
@@ -257,7 +255,7 @@ const AddPetForm = () => {
                         <label className="form-check-label small" htmlFor="confirm">
                             Принять <a href="https://10.rkn.gov.ru/docs/10/Pravila_obrabotki_PD.pdf">согласие на обработку персональных данных</a>
                         </label>
-                        <small className="text-danger align-content-between">{errors.confirm}</small>
+                        <p className="text-danger align-content-between">{errors.confirm}</p>
                     </div>
                     <button type="button" className="btn btn-primary" onClick={handlerSubmit}>Добавить объявление</button>
                 </form>

@@ -3,7 +3,7 @@ import {useLocation} from "react-router-dom";
 
 import CardsPetsList from "../components/pagination";
 
-import {ProfileRequest} from "../modules/requests";
+import {FustSearchRequest} from "../modules/requests";
 
 const SearchForm = () => {
     const location = useLocation();
@@ -21,7 +21,7 @@ const SearchForm = () => {
     }
 
     useEffect(() => {
-        ProfileRequest(query, cardPet, setCardPet)
+        FustSearchRequest(query, cardPet, setCardPet)
     }, [query]);
 
     return (

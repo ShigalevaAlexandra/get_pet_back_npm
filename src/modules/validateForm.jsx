@@ -27,6 +27,19 @@ const userEmailValid = (value) => {
     return error;
 }
 
+const userPassAuthValid = (value) => {
+    const error = !value.trim()
+        ? "*Введите пароль"
+        : !/^[a-zA-Z0-9]+$/.test(value)
+            ? "Введите пароль"
+            : !/[0-9]{1,}/.test(value)
+                ? "Введите пароль"
+                : value.length < 7
+                    ? "Введите пароль"
+                    : "";
+    return error;
+}
+
 const userPassValid = (value) => {
     const error = !value.trim()
         ? "*Придумайте пароль"
@@ -67,6 +80,7 @@ export {
     userNameValid,
     userPhoneValid,
     userEmailValid,
+    userPassAuthValid,
     userPassValid,
     userPassConfigValid,
     configValid,

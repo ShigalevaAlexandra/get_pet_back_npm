@@ -53,7 +53,7 @@ const CardsPetsList = ({ data, itemsPerPage }) => {
         <div>
             <div className="row justify-content-center">
                 <p className="text-center" id='res'>
-                    {data.length > 0 ? "Результаты поиска" : "Нет результатов"}
+                    {data.length > 0 ? "" : "Нет результатов"}
                 </p>
                 {currentData.map((item, index) => (
                     <CardPet key={index} data={item} />

@@ -5,7 +5,7 @@ import {FustSearchRequest} from "../modules/requests";
 
 let countChange = 0
 
-const FSearch = () => {
+const FustSearch = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [cardPet, setCardPet] = useState({ data: { orders: [] } })
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ const FSearch = () => {
     const submitSearch = (e) => {
         e.preventDefault()
         console.log(searchTerm);
-        navigate("/search", { state: { query: searchTerm } }); // Передаем объект
+        navigate("/searchPet", { state: { query: searchTerm } });
     };
 
     const onChange = (e) => {
@@ -67,4 +67,4 @@ const FSearch = () => {
     );
 }
 
-export default FSearch;
+export default FustSearch;
