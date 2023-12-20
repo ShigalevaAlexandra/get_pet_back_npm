@@ -128,7 +128,7 @@ const Auth = () => {
                     </div>
                     <div className="text-center bg-whiter">
                         <p className='text-danger text-center' id='error_auth' style={{display: 'none'}}>Введенные данные неверные(</p>
-                        <p className='text-success text-center' id='success_auth' style={{display: token ? "block" : 'none'}}>Вы успешно вошли в аккаунт!</p>
+                        <p className='text-success text-center' id='success_auth' style={{display: token ? "block" : 'none'}}>Вы успешно вошли в аккаунт! Ваш токен {token}</p>
                     </div>
                 </div>
             </div>
