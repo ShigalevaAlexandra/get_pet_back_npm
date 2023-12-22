@@ -20,7 +20,7 @@
 }
 
 .main_color_text {
-    color: var(--main-text);
+    color: var(--main-text) !important;
 }
 
 .main_background {
@@ -35,7 +35,7 @@
 }
 
 .back_color_text {
-    color: var(--back-color-text);
+    color: var(--back-color-text) !important;
 }
 
 .my_carousel {

@@ -32,9 +32,13 @@ const Header = () => {
                                 <ul className="dropdown-menu">
                                     <li><Link className="dropdown-item main_color_text" to={"/searchPet"}>Поиск по
                                         объявлениям</Link></li>
-                                    <li><Link className="dropdown-item main_color_text" to={"addPet"}>Добавить
+                                    <li><Link className="dropdown-item main_color_text" to={"/addPet"}>Добавить
                                         объявление</Link></li>
                                 </ul>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link back_color_text" aria-current="page"
+                                      to={'/userProfile'}>Личный кабинет</Link>
                             </li>
                         </ul>
                         <div className="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -42,7 +46,7 @@ const Header = () => {
                                     data-bs-target="#ModalRegistration">Регистрация
                             </button>
                             <button type="button" className="btn btn-primary me-md-2" data-bs-toggle="modal"
-                                    data-bs-target="#ModalAccount">Личный кабинет
+                                    data-bs-target="#ModalAccount">Вход
                             </button>
                         </div>
                         <Register/>

@@ -100,7 +100,6 @@ const Register = () => {
                 if (status === 204) {
                     document.getElementById("success_register").style.display = "block";
                     document.getElementById("fail_register").style.display = "none";
-                    navigate('/login')
                 } else {
                     document.getElementById("fail_register").style.display = "block";
                     document.getElementById("success_register").style.display = "none";
