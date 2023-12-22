@@ -9,18 +9,18 @@ import Subscribe from "../components/subscribeNews";
 import Footer from "../components/footer";
 
 const Main = () => {
-    const [card, setCard] = useState({ data: { orders: [] } });
-    useEffect(() => request(card, setCard), []);
-    const request = (card, setCard) => {
+    const [cardPet, setCardPet] = useState({ data: { orders: [] } });
+    useEffect(() => request(cardPet, setCardPet), []);
+    const request = (cardPet, setCardPet) => {
         fetch("https://pets.сделай.site/api/pets")
             .then(response => response.json())
             .then(result => {
                 console.log(result);
-                setCard(result);
+                setCardPet(result);
             })
             .catch(error => console.log('error', error));
     }
-    const cardsPet = card.data.orders.map((order) => {
+    const cardsPet = cardPet.data.orders.map((order) => {
         return <CardPet data={order}/>;
     });
 

@@ -84,7 +84,10 @@ const AddPetForm = () => {
     }, []);
 
     const request = (data) => {
-        fetch("https://pets.сделай.site/api/pets", { method: "POST", body: data })
+        fetch("https://pets.сделай.site/api/pets", {
+            method: "POST",
+            body: data
+        })
             .then(response => response.json())
             .then(result => {
                 console.log(result);
