@@ -12,7 +12,7 @@ const UserProfiie = () => {
     const navigate = useNavigate();
     useEffect(() => {
         if (!Token()) {
-            console.log("should go to login!!!!!")
+            console.log("Необходимо войти в аккаунт")
             navigate("/");
         }
     })

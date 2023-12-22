@@ -6,13 +6,11 @@ import ButtonsCard from "../components/buttonCardPet";
 
 import {ProfileRequest} from "../modules/requests";
 import {userEmailValid, userPhoneValid} from "../modules/validateForm";
-import CardPet from "./cardPet";
-
 
 const UserProfileInfo = () => {
     const navigate = useNavigate()
     const [profile, setProfile] = useState({ email: "", phone: "", name: "", registrationDate: new Date() });
-    const [cardPet, setCardPet] =  useState({ data: { orders: [] } });
+    const [card, setCard] =  useState({ data: { orders: [] } });
     const request = (card, setCard) => {
         fetch("https://pets.сделай.site/api/users/orders", {
             headers: {"Authorization": `Bearer ${localStorage.getItem("token")}`}
@@ -33,7 +31,7 @@ const UserProfileInfo = () => {
     }
     useEffect(() => {
         ProfileRequest(profile, setProfile)
-        request(cardPet, setCardPet)
+        request(card, setCard)
     }, []);
 
     const requestUpdate = (key) => {
@@ -48,7 +46,7 @@ const UserProfileInfo = () => {
         }).catch(error => console.log('error', error));
     }
 
-    const cards = cardPet.data.orders.map((order) => {
+    const cards = card.data.orders.map((order) => {
         return <ButtonsCard data={order}/>;
     });
 
@@ -77,7 +75,6 @@ const UserProfileInfo = () => {
         if (phoneError || emailError) {
             setErrors({phone: phoneError, email: emailError});
         } else {
-            // Все данные валидны, выполняем запрос
             requestUpdate(key)
         }
     };
@@ -125,7 +122,7 @@ const UserProfileInfo = () => {
             </div>
             <h5 className="py-4 main_color_text text-center"><b>Добавленные объявления</b></h5>
             <p className='text-center sear_text my-5' id='noOrders' style={{ display: 'none' }}>Нет объявлений</p>
-            <div className="d-flex flex-wrap justify-content-center" id='userCards' style={{display:"none"}}>
+            <div className="d-flex flex-row flex-wrap justify-content-center top_border_radius" id='userCards' style={{display:"none"}}>
                 {cards}
             </div>
         </main>

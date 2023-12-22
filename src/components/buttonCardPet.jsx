@@ -2,6 +2,7 @@ import React from "react";
 import {useState} from "react";
 
 import ModalRefactorCard from "../components/modalRefactor";
+import {Link} from "react-router-dom";
 
 const EditableField = ({ label, name, value, type = 'text', onChange = () => {} }) => (
     <>
@@ -60,13 +61,15 @@ const ButtonsCard = (props) => {
 
     const readOnlyView = () => (
         <>
-            <h5 className="card-title text-center">{localData.kind}</h5>
             <ul className="list-group list-group-flush">
-                <li className="list-group-item">Описание: {localData.description}</li>
-                <li className="list-group-item">ID: {localData.id}</li>
-                <li className="list-group-item">Район: {localData.district}</li>
-                <li className="list-group-item">Номер чипа: {localData.mark}</li>
-                <li className="list-group-item" id="date">Дата: {localData.date}</li>
+                <li className="list-group-item main_color_text"><b className="back_color_text">id: </b>{localData.id}</li>
+                <li className="list-group-item main_color_text"><b className="back_color_text">Имя нашедшего: </b>{localData.name}</li>
+                <li className="list-group-item main_color_text"><b className="back_color_text">Телефон для связи: </b>{localData.phone}</li>
+                <li className="list-group-item main_color_text"><b className="back_color_text">Вид животного: </b>{localData.kind}</li>
+                <li className="list-group-item main_color_text"><b className="back_color_text">Описание: </b>{localData.description}</li>
+                <li className="list-group-item main_color_text"><b className="back_color_text">Номер чипа: </b>{localData.mark}</li>
+                <li className="list-group-item main_color_text"><b className="back_color_text">Район: </b>{localData.district}</li>
+                <li className="list-group-item main_color_text" id="date"><b className="back_color_text">Дата: </b>{localData.date}</li>
             </ul>
         </>
     );
@@ -82,8 +85,8 @@ const ButtonsCard = (props) => {
 
     return (
         <>
-            <div className="minContainer card m-3" style={{ maxWidth: "35vw" }}>
-                <img src={'https://pets.сделай.site' + (props.data.photos || props.data.photos1)} className="card-img-top" alt="pig" height="300" />
+            <div className="m-3 my_cards top_border_radius" style={{overflow: "hidden",  maxWidth: "25vw"}}>
+                <img src={'https://pets.сделай.site' + (props.data.photos || props.data.photos1)} className="top_border_radius_img card-img-top" alt="cardPet" />
                 {['active', 'onModeration'].includes(props.data.status) ? (
                     <div className="card-body" style={{ display: "flex", flexDirection: "column" }}>
                         {editable ? editableFields() : readOnlyView()}

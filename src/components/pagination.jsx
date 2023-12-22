@@ -51,8 +51,8 @@ const CardsPetsList = ({ data, itemsPerPage }) => {
 
     return (
         <div>
-            <div className="row justify-content-center">
-                <p className="text-center" id='res'>
+            <div className="d-flex flex-row flex-wrap justify-content-center top_border_radius">
+                <p className="text-center my-5" id='res'>
                     {data.length > 0 ? "" : "Нет результатов"}
                 </p>
                 {currentData.map((item, index) => (
