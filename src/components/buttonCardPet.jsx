@@ -83,7 +83,7 @@ const ButtonsCard = (props) => {
     )
 
     return (
-        <>
+        <div className="my-2">
             <div className="m-3 my_cards top_border_radius" style={{overflow: "hidden",  maxWidth: "25vw"}}>
                 <img src={'https://pets.сделай.site' + (props.data.photos || props.data.photos1)} className="top_border_radius_img card-img-top" alt="cardPet" />
                 {['active', 'onModeration'].includes(props.data.status) ? (
@@ -107,7 +107,7 @@ const ButtonsCard = (props) => {
                 title="Подтверждение удаления"
                 body="Удалить объявление?"
             />
-        </>
+        </div>
     );
 }
 
