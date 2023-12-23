@@ -9,10 +9,10 @@ const ModalRefactorCard = ({ show, primaryText, primaryClass = 'primary', second
             <div className={className} tabIndex="-1" role="dialog" style={style}>
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title">{title}</h5>
+                        <div className="modal-header header_and_footer">
+                            <h5 className="modal-title back_color_text larger_text">{title}</h5>
                         </div>
-                        <div className="modal-body">{body}</div>
+                        <div className="modal-body main_color_text">{body}</div>
                         <div className="modal-footer">
                             {secondaryText && <button
                                 type="button"
