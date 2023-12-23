@@ -26,16 +26,15 @@ const OneCardPage = () => {
             .catch(error => console.log('error', error));
     }
     return (
-        <div>
-            <div className="main_background font_family">
-                <Header />
-                <main className="align-content-center">
-                    <CardOnePet data={petData.data.pet} center={true} />
+        <div className="main_background font_family">
+            <Header />
+                <main className="one_pet_my">
+                    <div className="card_one_pet">
+                        <CardOnePet data={petData.data.pet}/>
+                    </div>
+
                 </main>
-            </div>
-            <div>
-                <Footer />
-            </div>
+            <Footer />
         </div>
     );
 }

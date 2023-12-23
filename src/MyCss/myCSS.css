@@ -88,4 +88,13 @@
     display: flex;
 }
 
+.one_pet_my {
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.card_one_pet {
+    display: flex;
+    justify-content: center;
+}
 /*-------------------------------------------------------------------------*/
